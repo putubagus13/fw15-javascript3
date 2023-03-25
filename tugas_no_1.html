@@ -1,0 +1,36 @@
+<!-- Definisi synchronous adalah sebuah operasi akan dijalankan setelah operasi sebelumnya selesai dijalankan alias berurutan. 
+    contoh program:
+
+    function tanyaKabar(name) {
+    console.log('Apa kabar,', name);
+    }
+
+    function katakanHallo(name) {
+        console.log('Hallo,', name);
+    }
+
+    katakanHallo('Guntur');
+    tanyaKabar('Gun');
+
+
+    Sedangkan asynchronous sebaliknya, asynchronous tidak perlu menunggu operasi sebelumnya selesai untuk mengeksekusi operasi setelahnya.
+    Dalam skenario-nya, sebenarnya kode async telah diproses, hanya saja sebatas penjadwalan untuk dieksekusi pada tahapan berikutnya. 
+    Artinya, kode yang berperilaku async tidak akan langsung dieksekusi, tetapi di skip dan akan melakukan eksekusi baris perintah berikutnya.
+    contoh program:
+    function tanyaKabar(name) {
+    console.log('Apa kabar,', name);
+    }
+
+    function katakanHallo(name) {
+        setImmediate(function () {
+            console.log('Hallo,', name);
+        });
+    }
+
+    katakanHallo('Guntur');
+    tanyaKabar('Gun');
+
+    Pemanfaatan async sangat berguna pada saat melakukan operasi-operasi yang tidak harus menunggu proses yang lainnya. Misalnya, memanipulasi DOM ketika melakukan proses ajax.
+    Agar bisa memahami, kita perlu mengetahui cara menghandle kode async tersebut dengan cara callback ataupun promises.
+-->
+
