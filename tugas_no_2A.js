@@ -19,3 +19,7 @@ cekHariKerja('minggu')
     console.log(result)})
 .catch((error)=>{
     console.log(error.message)})
+
+/*Untuk menangani hasil atau error yang dihasilkan promise, gunakan then catch.
+Jika promise ini berhasil, maka fungsi tersebut akan dipanggil kedalam result dan jika tidak fungsi catch akan digunakan. dalam hal kita kita memasukkan input berupa day dan jika input day tersebut merupakan hari kerja maka nilai promise(resolve) akan masuk kedalam blok then.
+Jika terjadi error, itu akan masuk ke blok catch dan menampilkan pesan kesalahan yang ditentukan.*/
